@@ -1,0 +1,154 @@
+# =========================
+# Dependencies
+# =========================
+
+node_modules/
+.pnpm-store/
+.npm/
+
+# =========================
+# Next.js / Frontend Build
+# =========================
+
+.next/
+out/
+.vercel/
+frontend/.next/
+frontend/out/
+frontend/.vercel/
+frontend/node_modules/
+
+# =========================
+# Python / FastAPI Build
+# =========================
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+.ruff_cache/
+.tox/
+.nox/
+.pytest_cache/
+.mypy_cache/
+backend/__pycache__/
+backend/.pytest_cache/
+backend/.mypy_cache/
+frontend/__pycache__/
+frontend/.pytest_cache/
+frontend/.mypy_cache/
+
+# =========================
+# Virtual Environments
+# =========================
+
+venv/
+.venv/
+env/
+ENV/
+backend/venv/
+backend/.venv/
+frontend/venv/
+frontend/.venv/
+
+# =========================
+# Build Outputs
+# =========================
+
+dist/
+build/
+coverage/
+backend/dist/
+backend/build/
+frontend/dist/
+frontend/build/
+
+# =========================
+# Environment Variables
+# =========================
+
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+backend/.env
+backend/.env.local
+backend/.env.development.local
+backend/.env.test.local
+backend/.env.production.local
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Keep example files
+!.env.example
+!backend/.env.example
+!frontend/.env.example
+
+# =========================
+# Logs
+# =========================
+
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+backend/npm-debug.log*
+frontend/npm-debug.log*
+
+# =========================
+# IDE / Editor
+# =========================
+
+.vscode/
+.idea/
+.history/
+*.swp
+*.swo
+
+# =========================
+# OS Files
+# =========================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Audio Outputs
+# =========================
+
+audio/
+generated_audio/
+*.mp3
+*.wav
+
+# =========================
+# Database
+# =========================
+
+*.sqlite3
+*.db
+
+# =========================
+# Temporary Files
+# =========================
+
+tmp/
+temp/
+.cache/
+
+# =========================
+# Misc
+# =========================
+
+*.bak
+*.tmp
+*.orig
