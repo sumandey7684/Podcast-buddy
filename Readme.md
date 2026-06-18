@@ -464,7 +464,6 @@ http://localhost:3000
 
 Podcast Buddy draws inspiration from:
 
-- Adobe Podcast
 - Google NotebookLM Audio Overview
 - Perplexity Discover
 - Financial Times editorial design
