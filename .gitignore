@@ -17,6 +17,7 @@ frontend/.next/
 frontend/out/
 frontend/.vercel/
 frontend/node_modules/
+*.tsbuildinfo
 
 # =========================
 # Python / FastAPI Build
@@ -127,6 +128,8 @@ desktop.ini
 
 audio/
 generated_audio/
+static/audio/*.mp3
+backend/static/audio/*.mp3
 *.mp3
 *.wav
 

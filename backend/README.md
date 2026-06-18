@@ -59,7 +59,7 @@ Request:
 			"title": "Article title",
 			"description": "Short description",
 			"source": "Publication",
-			"url": "https://example.com/article",
+			"url": "https://www.reuters.com/technology/",
 			"published_at": "2026-06-12T10:00:00Z"
 		}
 	]

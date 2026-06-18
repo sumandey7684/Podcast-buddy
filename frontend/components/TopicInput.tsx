@@ -70,9 +70,10 @@ export function TopicInput({
               variant="primary"
               size="md"
               disabled={isLoading || value.trim().length === 0}
+              aria-label={isLoading ? 'Generating podcast' : 'Generate podcast'}
               className="absolute right-2 top-1/2 -translate-y-1/2"
             >
-              Generate podcast
+              {isLoading ? 'Generating…' : 'Generate podcast'}
               <ArrowRight size={14} />
             </Button>
           </div>

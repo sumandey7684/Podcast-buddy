@@ -1,5 +1,8 @@
+from pathlib import Path
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 
 from app.config.settings import get_settings
 from app.routes.health import router as health_router
@@ -10,6 +13,9 @@ from app.routes.tts import router as tts_router
 
 
 settings = get_settings()
+STATIC_DIR = Path(__file__).resolve().parents[1] / "static"
+AUDIO_DIR = STATIC_DIR / "audio"
+AUDIO_DIR.mkdir(parents=True, exist_ok=True)
 
 app = FastAPI(
     title=settings.project_name,
@@ -17,10 +23,11 @@ app = FastAPI(
     description="Backend API for Podcast Buddy",
 )
 
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000"],
-    allow_credentials=True,
+    allow_origins=["*"],
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
@@ -30,6 +37,7 @@ app.include_router(news_router, prefix="/api/v1")
 app.include_router(gemini_router, prefix="/api/v1")
 app.include_router(podcast_router, prefix="/api/v1")
 app.include_router(tts_router, prefix="/api/v1")
+app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 
 
 @app.get("/")

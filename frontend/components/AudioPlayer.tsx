@@ -7,6 +7,8 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card, CardBody, CardHeader } from '@/components/ui/card'
 
+const apiBaseUrl = process.env.NEXT_PUBLIC_API_BASE_URL ?? 'http://localhost:8000'
+
 interface AudioPlayerProps {
   audioUrl: string
   title?: string
@@ -25,12 +27,21 @@ function formatTime(seconds: number): string {
   return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`
 }
 
+function resolveAudioUrl(audioUrl: string): string {
+  if (/^https?:\/\//i.test(audioUrl)) {
+    return audioUrl
+  }
+
+  return `${apiBaseUrl.replace(/\/$/, '')}/${audioUrl.replace(/^\//, '')}`
+}
+
 export function AudioPlayer({ audioUrl, title = 'Podcast audio' }: AudioPlayerProps) {
   const audioRef = useRef<HTMLAudioElement | null>(null)
   const [isPlaying, setIsPlaying] = useState(false)
   const [currentTime, setCurrentTime] = useState(0)
   const [duration, setDuration] = useState(0)
   const [playbackRate, setPlaybackRate] = useState(1)
+  const resolvedAudioUrl = resolveAudioUrl(audioUrl)
 
   useEffect(() => {
     const audio = audioRef.current
@@ -102,7 +113,7 @@ export function AudioPlayer({ audioUrl, title = 'Podcast audio' }: AudioPlayerPr
         <CardBody className="space-y-5">
           <audio
             ref={audioRef}
-            src={audioUrl}
+            src={resolvedAudioUrl}
             preload="metadata"
             onLoadedMetadata={(event) => setDuration(event.currentTarget.duration)}
             onTimeUpdate={(event) => setCurrentTime(event.currentTarget.currentTime)}
@@ -169,7 +180,7 @@ export function AudioPlayer({ audioUrl, title = 'Podcast audio' }: AudioPlayerPr
 
           <div className="flex flex-wrap items-center gap-3 border-t border-white/8 pt-4">
             <a
-              href={audioUrl}
+              href={resolvedAudioUrl}
               download
               className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/78 transition-all duration-200 hover:border-white/18 hover:bg-white/8 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white/50"
             >
