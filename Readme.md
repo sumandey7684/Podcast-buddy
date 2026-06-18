@@ -4,7 +4,7 @@ Turn breaking news into natural podcast episodes powered by AI.
 
 Podcast Buddy is an AI-powered news-to-podcast platform that fetches the latest news on any topic, summarizes it with Gemini, generates a natural two-host conversation, converts the script into realistic speech with Edge TTS, merges the audio with FFmpeg, and delivers a playable MP3 episode in the browser.
 
-Inspired by Google NotebookLM Audio Overview and modern editorial media experiences.
+Inspired by Adobe Podcast, Google NotebookLM Audio Overview, and modern editorial media experiences.
 
 ---
 
@@ -18,7 +18,8 @@ Inspired by Google NotebookLM Audio Overview and modern editorial media experien
 - Downloadable MP3 podcast episodes
 - Interactive transcript viewer
 - Editorial news source cards
-- Clean, responsive UI for desktop and mobile
+- Modern Adobe Podcast-inspired UI
+- Clean, responsive design for desktop and mobile
 
 ---
 
@@ -463,6 +464,7 @@ http://localhost:3000
 
 Podcast Buddy draws inspiration from:
 
+- Adobe Podcast
 - Google NotebookLM Audio Overview
 - Perplexity Discover
 - Financial Times editorial design
