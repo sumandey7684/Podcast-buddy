@@ -119,8 +119,8 @@ export function TranscriptViewer({ transcript }: TranscriptViewerProps) {
                   <span className="text-xs text-white/35">{hostALines.length} lines</span>
                 </div>
                 <div className="mt-4 space-y-3 text-[15px] leading-7 text-white/82">
-                  {hostALines.map((line) => (
-                    <p key={line} className="border-l border-white/10 pl-4">
+                  {hostALines.map((line, lineIndex) => (
+                    <p key={`host-a-${lineIndex}`} className="border-l border-white/10 pl-4">
                       {line}
                     </p>
                   ))}
@@ -133,8 +133,8 @@ export function TranscriptViewer({ transcript }: TranscriptViewerProps) {
                   <span className="text-xs text-white/35">{hostBLines.length} lines</span>
                 </div>
                 <div className="mt-4 space-y-3 text-[15px] leading-7 text-white/82">
-                  {hostBLines.map((line) => (
-                    <p key={line} className="border-l border-white/10 pl-4">
+                  {hostBLines.map((line, lineIndex) => (
+                    <p key={`host-b-${lineIndex}`} className="border-l border-white/10 pl-4">
                       {line}
                     </p>
                   ))}
@@ -150,8 +150,8 @@ export function TranscriptViewer({ transcript }: TranscriptViewerProps) {
                   <Badge tone="accent">Ready for TTS</Badge>
                 </div>
                 <div className="mt-4 max-h-[32rem] space-y-3 overflow-y-auto pr-2 text-[15px] leading-7 text-white/80">
-                  {fullLines.map((line) => (
-                    <div key={line} className="rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3">
+                  {fullLines.map((line, lineIndex) => (
+                    <div key={`full-${lineIndex}`} className="rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3">
                       {line}
                     </div>
                   ))}

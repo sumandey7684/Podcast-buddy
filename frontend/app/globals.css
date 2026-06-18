@@ -62,11 +62,15 @@ body::before {
 
 @layer components {
   .premium-panel {
-    @apply rounded-2xl border border-white/8 bg-surface/90 shadow-soft shadow-black/20 backdrop-blur-sm;
+    @apply rounded-2xl border shadow-soft backdrop-blur-sm;
+    background-color: rgba(16, 18, 22, 0.9);
+    border-color: rgba(255, 255, 255, 0.08);
   }
 
   .premium-panel-alt {
-    @apply rounded-2xl border border-white/8 bg-surfaceAlt/90 shadow-soft shadow-black/20;
+    @apply rounded-2xl border shadow-soft;
+    background-color: rgba(21, 24, 29, 0.9);
+    border-color: rgba(255, 255, 255, 0.08);
   }
 
   .section-label {

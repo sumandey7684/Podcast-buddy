@@ -44,8 +44,8 @@ export function SummaryPanel({ topic, summary }: SummaryPanelProps) {
                 </div>
 
                 <ul className="mt-4 space-y-3">
-                  {section.items.map((item) => (
-                    <li key={item} className="flex gap-3 text-sm leading-6 text-white/70">
+                  {section.items.map((item, itemIndex) => (
+                    <li key={`${section.title}-${itemIndex}`} className="flex gap-3 text-sm leading-6 text-white/70">
                       <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-white/35" />
                       <span>{item}</span>
                     </li>
