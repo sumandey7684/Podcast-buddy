@@ -456,9 +456,9 @@ Podcast Buddy draws inspiration from:
 # Author
 
 **Suman Dey**
-
-B.Tech CSE Student
-AI Engineer | Full Stack Developer | UI/UX Designer
+**Subhasish Rath**
+**Soumya ranjan Samal**
+**Gaurav kumar Nayak**
 
 ---
 
