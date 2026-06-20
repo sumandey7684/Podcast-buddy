@@ -29,8 +29,6 @@ User enters a topic
         ↓
 Fetch latest news (GNews)
         ↓
-Gemini summary
-        ↓
 Local dialogue generation
         ↓
 Edge TTS
