@@ -11,7 +11,6 @@ Inspired by Adobe Podcast, Google NotebookLM Audio Overview, and modern editoria
 ## Features
 
 - Latest news fetching using the GNews API
-- AI-powered news summarization using Gemini 2.5 Flash
 - Natural two-host podcast dialogue generation via a local script engine
 - Realistic AI voice generation using Edge TTS
 - Audio merging using FFmpeg
